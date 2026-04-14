@@ -47,7 +47,7 @@
       </div>
     </div>
     <div class="hero-image">
-      <img src="img-carport-arch.png" alt="Арочный навес из металла">
+      <img src="hero-carport.png" alt="Навес для автомобиля из металла">
     </div>
   </div>
 </section>
@@ -105,7 +105,16 @@
     <div class="catalog-grid">
 
       <div class="card" data-category="navesy">
-        <div class="card-img"><img src="img-carport-arch.png" alt="Навес для автомобиля"></div>
+        <div class="card-img card-carousel">
+          <img src="img-carport-arch.png" alt="Арочный навес" class="carousel-slide active">
+          <img src="img-carport-house.png" alt="Навес у дома" class="carousel-slide">
+          <div class="carousel-dots">
+            <button class="dot active" data-idx="0"></button>
+            <button class="dot" data-idx="1"></button>
+          </div>
+          <button class="carousel-arrow carousel-prev" aria-label="Назад">&#8249;</button>
+          <button class="carousel-arrow carousel-next" aria-label="Вперёд">&#8250;</button>
+        </div>
         <div class="card-body">
           <span class="card-tag">Хит продаж</span>
           <h3>Навес для автомобиля</h3>
@@ -132,7 +141,7 @@
       </div>
 
       <div class="card" data-category="navesy">
-        <div class="card-img"><img src="img-carport-house.png" alt="Навес для двух машин"></div>
+        <div class="card-img"><img src="hero-carport.png" alt="Навес для двух машин"></div>
         <div class="card-body">
           <h3>Навес для двух машин</h3>
           <p>Усиленный каркас 80×80&nbsp;мм, ширина от 6&nbsp;м. Бетонирование столбов от 1,5&nbsp;м.</p>
@@ -456,6 +465,39 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
         setTimeout(() => { card.style.display = 'none'; }, 250);
       }
     });
+  });
+});
+
+document.querySelectorAll('.card-carousel').forEach(carousel => {
+  const slides = carousel.querySelectorAll('.carousel-slide');
+  const dots = carousel.querySelectorAll('.dot');
+  let current = 0;
+
+  function goTo(idx) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (idx + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  carousel.querySelector('.carousel-prev').addEventListener('click', e => {
+    e.preventDefault();
+    goTo(current - 1);
+  });
+  carousel.querySelector('.carousel-next').addEventListener('click', e => {
+    e.preventDefault();
+    goTo(current + 1);
+  });
+  dots.forEach(dot => dot.addEventListener('click', e => {
+    e.preventDefault();
+    goTo(+dot.dataset.idx);
+  }));
+
+  let timer = setInterval(() => goTo(current + 1), 4000);
+  carousel.addEventListener('mouseenter', () => clearInterval(timer));
+  carousel.addEventListener('mouseleave', () => {
+    timer = setInterval(() => goTo(current + 1), 4000);
   });
 });
 </script>
