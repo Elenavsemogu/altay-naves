@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>АлтайНавес — навесы, перголы, беседки в Барнауле под ключ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-inner">
+    <a href="#" class="logo">АЛТАЙ<span>НАВЕС</span></a>
+    <nav class="nav">
+      <a href="#catalog">Каталог</a>
+      <a href="#about">О нас</a>
+      <a href="#pricing">Цены</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a href="tel:+79646034143" class="header-phone">+7 (964) 603-41-43</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <h1>Навесы и перголы<br>из металла под ключ</h1>
+      <p class="hero-sub">Изготовление, доставка и монтаж металлоконструкций в Барнауле и&nbsp;Алтайском крае. Собственное производство, гарантия по договору.</p>
+      <a href="#contacts" class="btn btn-primary">Рассчитать стоимость</a>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">50<small>+</small></span>
+          <span class="stat-label">выполненных<br>проектов</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">года<br>на рынке</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">14</span>
+          <span class="stat-label">дней —<br>средний срок</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="img-carport-arch.png" alt="Арочный навес из металла">
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <div class="container">
+    <div class="benefits-grid">
+      <div class="benefit">
+        <div class="benefit-icon">
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Надёжность</h3>
+        <p>Используем профильную трубу от 60×60&nbsp;мм. Все соединения — заводская сварка</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Собственное производство</h3>
+        <p>Без посредников — вы получаете изделие напрямую от мастера по честной цене</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Гарантия</h3>
+        <p>Письменная гарантия на каркас — до&nbsp;10&nbsp;лет. Фиксированная смета до начала работ</p>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3>Барнаул и край</h3>
+        <p>Доставка и монтаж по Барнаулу бесплатно. По Алтайскому краю — договоримся</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG -->
+<section class="catalog" id="catalog">
+  <div class="container">
+    <div class="section-header">
+      <h2>Каталог изделий</h2>
+      <p class="section-sub">Изготавливаем по типовым и индивидуальным проектам</p>
+    </div>
+    <div class="catalog-filters">
+      <button class="filter-btn active" data-filter="all">Все изделия</button>
+      <button class="filter-btn" data-filter="navesy">Навесы</button>
+      <button class="filter-btn" data-filter="pergoly">Перголы и беседки</button>
+      <button class="filter-btn" data-filter="kozyrki">Козырьки</button>
+    </div>
+
+    <div class="catalog-grid">
+
+      <div class="card" data-category="navesy">
+        <div class="card-img"><img src="img-carport-arch.png" alt="Навес для автомобиля"></div>
+        <div class="card-body">
+          <span class="card-tag">Хит продаж</span>
+          <h3>Навес для автомобиля</h3>
+          <p>Односкатный / двускатный / арочный. Профнастил или поликарбонат.</p>
+          <div class="card-price">от <strong>55 000</strong> руб.</div>
+          <details class="card-details">
+            <summary>Подробнее о ценах</summary>
+            <div class="card-pricing">
+              <table>
+                <thead><tr><th>Размер</th><th>Профнастил</th><th>Поликарбонат</th></tr></thead>
+                <tbody>
+                  <tr><td>3 × 5 м (15 м²)</td><td>45 000 ₽</td><td>53 000 ₽</td></tr>
+                  <tr><td>3 × 6 м (18 м²)</td><td>55 000 ₽</td><td>63 000 ₽</td></tr>
+                  <tr class="popular"><td>3.5 × 6 м (21 м²)</td><td>63 000 ₽</td><td>74 000 ₽</td></tr>
+                </tbody>
+              </table>
+              <div class="card-includes">
+                <span class="incl-title">Что входит:</span> каркас из профтрубы 80×80, фермы, обрешётка, кровля, покраска, бетонирование столбов, монтаж
+              </div>
+              <a href="#contacts" class="btn btn-primary btn-sm">Рассчитать мой размер</a>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="card" data-category="navesy">
+        <div class="card-img"><img src="img-carport-house.png" alt="Навес для двух машин"></div>
+        <div class="card-body">
+          <h3>Навес для двух машин</h3>
+          <p>Усиленный каркас 80×80&nbsp;мм, ширина от 6&nbsp;м. Бетонирование столбов от 1,5&nbsp;м.</p>
+          <div class="card-price">от <strong>88 000</strong> руб.</div>
+          <details class="card-details">
+            <summary>Подробнее о ценах</summary>
+            <div class="card-pricing">
+              <table>
+                <thead><tr><th>Размер</th><th>Профнастил</th><th>Поликарбонат</th></tr></thead>
+                <tbody>
+                  <tr><td>5.5 × 6 м (33 м²)</td><td>88 000 ₽</td><td>105 000 ₽</td></tr>
+                  <tr class="popular"><td>6 × 6 м (36 м²)</td><td>95 000 ₽</td><td>115 000 ₽</td></tr>
+                  <tr><td>6 × 8 м (48 м²)</td><td>125 000 ₽</td><td>150 000 ₽</td></tr>
+                </tbody>
+              </table>
+              <div class="card-includes">
+                <span class="incl-title">Что входит:</span> усиленный каркас 80×80 / 100×100, фермы, кровля, покраска, бетонирование 6–8 столбов, монтаж
+              </div>
+              <a href="#contacts" class="btn btn-primary btn-sm">Рассчитать мой размер</a>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="card" data-category="pergoly">
+        <div class="card-img placeholder-img accent"><span>Фото</span></div>
+        <div class="card-body">
+          <span class="card-tag new">Новинка</span>
+          <h3>Пергола металл + дерево</h3>
+          <p>Стильная зона отдыха для дачи и загородного дома. Металлический каркас, деревянная обрешётка.</p>
+          <div class="card-price">от <strong>40 000</strong> руб.</div>
+          <details class="card-details">
+            <summary>Подробнее о ценах</summary>
+            <div class="card-pricing">
+              <table>
+                <thead><tr><th>Размер</th><th>Открытая</th><th>С поликарбонатом</th></tr></thead>
+                <tbody>
+                  <tr><td>2 × 2 м (4 м²)</td><td>28 000 ₽</td><td>35 000 ₽</td></tr>
+                  <tr class="popular"><td>3 × 3 м (9 м²)</td><td>40 000 ₽</td><td>52 000 ₽</td></tr>
+                  <tr><td>3 × 4 м (12 м²)</td><td>50 000 ₽</td><td>65 000 ₽</td></tr>
+                </tbody>
+              </table>
+              <div class="card-includes">
+                <span class="incl-title">Что входит:</span> каркас из профтрубы, деревянные рейки (сосна, обработка), покраска металла RAL, монтаж
+              </div>
+              <a href="#contacts" class="btn btn-primary btn-sm">Рассчитать мой размер</a>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="card" data-category="pergoly">
+        <div class="card-img placeholder-img accent"><span>Фото</span></div>
+        <div class="card-body">
+          <span class="card-tag new">Новинка</span>
+          <h3>Беседка металл + дерево</h3>
+          <p>Закрытая или открытая зона отдыха. Металлический каркас, деревянная обшивка. Остекление по желанию.</p>
+          <div class="card-price">от <strong>80 000</strong> руб.</div>
+          <details class="card-details">
+            <summary>Подробнее о ценах</summary>
+            <div class="card-pricing">
+              <table>
+                <thead><tr><th>Размер</th><th>Открытая</th><th>Полузакрытая</th></tr></thead>
+                <tbody>
+                  <tr><td>3 × 3 м (9 м²)</td><td>80 000 ₽</td><td>105 000 ₽</td></tr>
+                  <tr class="popular"><td>3 × 4 м (12 м²)</td><td>100 000 ₽</td><td>130 000 ₽</td></tr>
+                  <tr><td>4 × 5 м (20 м²)</td><td>140 000 ₽</td><td>180 000 ₽</td></tr>
+                </tbody>
+              </table>
+              <div class="card-includes">
+                <span class="incl-title">Что входит:</span> каркас 80×80, деревянная обшивка, кровля (металлочерепица / мягкая), покраска, фундамент, монтаж
+              </div>
+              <a href="#contacts" class="btn btn-primary btn-sm">Рассчитать мой размер</a>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="card" data-category="navesy">
+        <div class="card-img placeholder-img"><span>Фото</span></div>
+        <div class="card-body">
+          <h3>Навес для веранды</h3>
+          <p>Пристроенный к дому. Металл или комбинация с деревом. Поликарбонат, металлочерепица.</p>
+          <div class="card-price">от <strong>45 000</strong> руб.</div>
+          <details class="card-details">
+            <summary>Подробнее о ценах</summary>
+            <div class="card-pricing">
+              <table>
+                <thead><tr><th>Размер</th><th>Поликарбонат</th><th>Металлочерепица</th></tr></thead>
+                <tbody>
+                  <tr><td>3 × 3 м (9 м²)</td><td>35 000 ₽</td><td>40 000 ₽</td></tr>
+                  <tr class="popular"><td>3 × 4 м (12 м²)</td><td>45 000 ₽</td><td>52 000 ₽</td></tr>
+                  <tr><td>4 × 6 м (24 м²)</td><td>78 000 ₽</td><td>92 000 ₽</td></tr>
+                </tbody>
+              </table>
+              <div class="card-includes">
+                <span class="incl-title">Что входит:</span> пристенный каркас, 2–4 столба, кровля, покраска, крепёж к стене, монтаж
+              </div>
+              <a href="#contacts" class="btn btn-primary btn-sm">Рассчитать мой размер</a>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="card" data-category="navesy">
+        <div class="card-img placeholder-img"><span>Фото</span></div>
+        <div class="card-body">
+          <h3>Навес для террасы</h3>
+          <p>Открытая зона отдыха с надёжной защитой от солнца и дождя. Любой размер и форма.</p>
+          <div class="card-price">от <strong>50 000</strong> руб.</div>
+          <details class="card-details">
+            <summary>Подробнее о ценах</summary>
+            <div class="card-pricing">
+              <table>
+                <thead><tr><th>Размер</th><th>Поликарбонат</th><th>Мягкая кровля</th></tr></thead>
+                <tbody>
+                  <tr><td>3 × 4 м (12 м²)</td><td>45 000 ₽</td><td>55 000 ₽</td></tr>
+                  <tr class="popular"><td>4 × 5 м (20 м²)</td><td>68 000 ₽</td><td>82 000 ₽</td></tr>
+                  <tr><td>5 × 8 м (40 м²)</td><td>120 000 ₽</td><td>148 000 ₽</td></tr>
+                </tbody>
+              </table>
+              <div class="card-includes">
+                <span class="incl-title">Что входит:</span> каркас, фермы, кровля, покраска, бетонирование, монтаж. Водосток — опционально
+              </div>
+              <a href="#contacts" class="btn btn-primary btn-sm">Рассчитать мой размер</a>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <div class="card" data-category="kozyrki">
+        <div class="card-img placeholder-img"><span>Фото</span></div>
+        <div class="card-body">
+          <h3>Козырёк над крыльцом</h3>
+          <p>Компактный навес над входом. Поликарбонат, ковка, любой цвет RAL.</p>
+          <div class="card-price">от <strong>12 000</strong> руб.</div>
+          <details class="card-details">
+            <summary>Подробнее о ценах</summary>
+            <div class="card-pricing">
+              <table>
+                <thead><tr><th>Тип</th><th>Размер</th><th>Цена</th></tr></thead>
+                <tbody>
+                  <tr><td>Односкатный</td><td>1,2 × 0,9 м</td><td>12 000 ₽</td></tr>
+                  <tr class="popular"><td>Арочный</td><td>1,5 × 1,0 м</td><td>16 000 ₽</td></tr>
+                  <tr><td>Двускатный</td><td>2,0 × 1,2 м</td><td>22 000 ₽</td></tr>
+                  <tr><td>С элементами ковки</td><td>1,5 × 1,0 м</td><td>25 000 ₽</td></tr>
+                </tbody>
+              </table>
+              <div class="card-includes">
+                <span class="incl-title">Что входит:</span> каркас, поликарбонат / профнастил, покраска, монтаж к стене
+              </div>
+              <a href="#contacts" class="btn btn-primary btn-sm">Рассчитать мой размер</a>
+            </div>
+          </details>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="about">
+  <div class="container">
+    <div class="section-header">
+      <h2>Как мы работаем</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Заявка и замер</h3>
+        <p>Вы оставляете заявку — мы приезжаем на бесплатный замер и обсуждаем проект</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Расчёт и договор</h3>
+        <p>Готовим точную смету, фиксируем цену в&nbsp;договоре. Никаких доплат</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Изготовление</h3>
+        <p>Производим конструкцию на нашей базе. Срок — от 5 до 14&nbsp;дней</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Монтаж и сдача</h3>
+        <p>Доставляем и устанавливаем. Подписываем акт, выдаём гарантию</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <h2>Цены на навесы в 2026 году</h2>
+      <p class="section-sub">Стоимость под ключ с монтажом и материалами</p>
+    </div>
+    <div class="price-table-wrap">
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Изделие</th>
+            <th>Размер</th>
+            <th>Цена от</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Навес для 1 авто</td>
+            <td>3 × 6 м</td>
+            <td><strong>55 000 руб.</strong></td>
+          </tr>
+          <tr>
+            <td>Навес для 2 авто</td>
+            <td>6 × 6 м</td>
+            <td><strong>88 000 руб.</strong></td>
+          </tr>
+          <tr>
+            <td>Пергола металл + дерево</td>
+            <td>3 × 3 м</td>
+            <td><strong>40 000 руб.</strong></td>
+          </tr>
+          <tr>
+            <td>Навес для веранды</td>
+            <td>3 × 4 м</td>
+            <td><strong>45 000 руб.</strong></td>
+          </tr>
+          <tr>
+            <td>Навес для террасы</td>
+            <td>4 × 5 м</td>
+            <td><strong>50 000 руб.</strong></td>
+          </tr>
+          <tr>
+            <td>Беседка металл + дерево</td>
+            <td>3 × 3 м</td>
+            <td><strong>80 000 руб.</strong></td>
+          </tr>
+          <tr>
+            <td>Козырёк над крыльцом</td>
+            <td>1,5 × 1 м</td>
+            <td><strong>12 000 руб.</strong></td>
+          </tr>
+          <tr class="highlight-row">
+            <td>Комплекс: навес + козырёк</td>
+            <td>индивидуально</td>
+            <td><strong>от 100 000 руб.</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="price-note">* Точная стоимость зависит от размеров, материала кровли и сложности конструкции. Рассчитаем бесплатно за 15 минут.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contacts">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <h2>Рассчитайте стоимость<br>вашего навеса</h2>
+        <p>Оставьте заявку — перезвоним в течение 30&nbsp;минут, ответим на вопросы и приедем на бесплатный замер</p>
+      </div>
+      <form class="cta-form" onsubmit="return false">
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="tel" placeholder="+7 (___) ___-__-__" required>
+        <select>
+          <option value="">Что вас интересует?</option>
+          <option>Навес для авто</option>
+          <option>Пергола</option>
+          <option>Беседка</option>
+          <option>Навес для веранды / террасы</option>
+          <option>Козырёк над крыльцом</option>
+          <option>Другое</option>
+        </select>
+        <button type="submit" class="btn btn-primary btn-full">Получить расчёт</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <a href="#" class="logo">АЛТАЙ<span>НАВЕС</span></a>
+      <p class="footer-desc">Навесы, перголы, беседки<br>в Барнауле и Алтайском крае</p>
+    </div>
+    <div class="footer-col">
+      <h4>Продукция</h4>
+      <a href="#catalog">Навесы для авто</a>
+      <a href="#catalog">Перголы и беседки</a>
+      <a href="#catalog">Навесы для веранды</a>
+      <a href="#catalog">Козырьки</a>
+    </div>
+    <div class="footer-col">
+      <h4>Контакты</h4>
+      <a href="tel:+79646034143">+7 (964) 603-41-43</a>
+      <p>г. Барнаул, Алтайский край</p>
+      <p>Пн–Сб: 9:00 – 19:00</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 АлтайНавес. Все права защищены.</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelector('.filter-btn.active').classList.remove('active');
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.card').forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.style.display = '';
+        requestAnimationFrame(() => card.classList.remove('card-hidden'));
+      } else {
+        card.classList.add('card-hidden');
+        setTimeout(() => { card.style.display = 'none'; }, 250);
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
