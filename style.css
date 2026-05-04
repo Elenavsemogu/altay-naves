@@ -551,6 +551,18 @@ a { text-decoration: none; color: inherit; }
   border-radius: 12px;
 }
 .cta-form .btn-primary:hover { background: #d4a017; }
+.cta-form .btn-primary:disabled { opacity: .6; cursor: default; }
+.form-success {
+  background: rgba(184,134,11,.15);
+  border: 1px solid rgba(184,134,11,.4);
+  border-radius: 12px;
+  padding: 16px 20px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  animation: fadeIn .3s ease;
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
 
 /* ===== FOOTER ===== */
 .footer {

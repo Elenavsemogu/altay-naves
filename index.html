@@ -191,12 +191,12 @@
           <h3>Бытовка / хозблок</h3>
           <p>Металлический каркас, обшивка профлистом. Не гниёт, не ведёт. Для хранения инструмента, техники, садового инвентаря.</p>
           <div class="price-display">
-            <div class="price-row price-row-single"><span>Стоимость</span><strong>рассчитывается индивидуально</strong></div>
+            <div class="price-row price-row-single"><span>Стоимость</span><strong class="pd-p1">от 49 000 ₽</strong></div>
           </div>
           <div class="card-includes">
             <span class="incl-title">Что входит:</span> каркас из профтрубы, обшивка профлистом, дверь, покраска, монтаж
           </div>
-          <a href="#contacts" class="btn btn-primary btn-sm">Узнать стоимость</a>
+          <a href="#contacts" class="btn btn-primary btn-sm">Рассчитать мой размер</a>
         </div>
       </div>
 
@@ -319,7 +319,7 @@
           <tr>
             <td>Бытовка / хозблок</td>
             <td>любой</td>
-            <td><strong>по запросу</strong></td>
+            <td><strong>от 49 000 руб.</strong></td>
           </tr>
           <tr>
             <td>Беседка (светлая)</td>
@@ -346,10 +346,10 @@
         <h2>Рассчитайте стоимость<br>вашего навеса</h2>
         <p>Оставьте заявку — перезвоним в течение 30&nbsp;минут, ответим на вопросы и приедем на бесплатный замер</p>
       </div>
-      <form class="cta-form" onsubmit="return false">
-        <input type="text" placeholder="Ваше имя" required>
-        <input type="tel" placeholder="+7 (___) ___-__-__" required>
-        <select>
+      <form class="cta-form" id="lead-form">
+        <input type="text" id="f-name" placeholder="Ваше имя" required>
+        <input type="tel" id="f-phone" placeholder="+7 (___) ___-__-__" required>
+        <select id="f-product">
           <option value="">Что вас интересует?</option>
           <option>Арочный навес</option>
           <option>Односкатный навес</option>
@@ -359,6 +359,9 @@
           <option>Другое</option>
         </select>
         <button type="submit" class="btn btn-primary btn-full">Получить расчёт</button>
+        <div class="form-success" id="form-success" style="display:none">
+          <p>Заявка отправлена! Сейчас откроется чат — отправьте сообщение, и мы перезвоним в течение 30 минут.</p>
+        </div>
       </form>
     </div>
   </div>
@@ -380,6 +383,7 @@
     <div class="footer-col">
       <h4>Контакты</h4>
       <a href="tel:+79646034143">+7 (964) 603-41-43</a>
+      <a href="https://max.ru/u/f9LHodD0cOKYewCKlwA4CBsKpimDQK7qMsfgsSO2optrFy6P0DpmboPx81g" target="_blank" rel="noopener">Написать в Max</a>
       <p>г. Барнаул, Алтайский край</p>
       <p>Пн–Сб: 9:00 – 19:00</p>
     </div>
@@ -443,6 +447,36 @@ document.querySelectorAll('.size-selector').forEach(sel => {
       if (p2El) p2El.textContent = fmt(+pill.dataset.p2);
     });
   });
+});
+
+const MAX_URL = 'https://max.ru/u/f9LHodD0cOKYewCKlwA4CBsKpimDQK7qMsfgsSO2optrFy6P0DpmboPx81g';
+
+document.getElementById('lead-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('f-name').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+  const product = document.getElementById('f-product').value || 'Не выбрано';
+
+  if (!name || !phone) return;
+
+  const msg = 'Заявка с сайта АлтайНавес22\n\nИмя: ' + name + '\nТелефон: ' + phone + '\nИнтересует: ' + product;
+
+  document.getElementById('form-success').style.display = 'block';
+  this.querySelector('button[type="submit"]').textContent = 'Отправлено ✓';
+  this.querySelector('button[type="submit"]').disabled = true;
+
+  window.open(MAX_URL, '_blank');
+
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(msg);
+  }
+
+  setTimeout(() => {
+    this.reset();
+    document.getElementById('form-success').style.display = 'none';
+    this.querySelector('button[type="submit"]').textContent = 'Получить расчёт';
+    this.querySelector('button[type="submit"]').disabled = false;
+  }, 10000);
 });
 </script>
 </body>
