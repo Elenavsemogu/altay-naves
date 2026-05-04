@@ -63,7 +63,7 @@
     .photo-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4px;
+      gap: 6px;
       padding: 0 24px;
       flex: 1;
       min-height: 0;
@@ -80,10 +80,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-    .photo:first-child {
-      grid-column: 1 / -1;
-      min-height: 130px;
     }
     .photo-placeholder {
       font-size: 11px;
@@ -179,7 +175,6 @@
 
   <div class="photo-grid">
     <div class="photo"><img src="img-shed-1.png" alt="Бытовка из профлиста"></div>
-    <div class="photo"><img src="img-bbq-1.png" alt="Беседка-барбекю"></div>
     <div class="photo"><img src="img-shed-2.png" alt="Хозблок компактный"></div>
   </div>
 

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Листовка — Беседки и мангальные зоны — АлтайНавес22</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    @page { size: 148mm 210mm; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      width: 148mm; height: 210mm;
+      background: #1a1a1a;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .header {
+      padding: 20px 24px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -.03em;
+    }
+    .logo span { color: #b8860b; }
+    .phone {
+      font-size: 14px;
+      font-weight: 700;
+      color: #b8860b;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      padding: 0 24px;
+      flex: 1;
+      min-height: 0;
+    }
+    .photo {
+      background: linear-gradient(135deg, #333 0%, #222 100%);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .content {
+      padding: 20px 24px 12px;
+    }
+    .headline {
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      margin-bottom: 12px;
+    }
+    .headline em {
+      font-style: normal;
+      color: #b8860b;
+    }
+
+    .features {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .feature {
+      flex: 1;
+    }
+    .feature-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: #b8860b;
+      margin-bottom: 2px;
+    }
+    .feature-text {
+      font-size: 11px;
+      color: rgba(255,255,255,.6);
+      line-height: 1.4;
+    }
+
+    .cta {
+      background: #b8860b;
+      margin: 0 24px 20px;
+      border-radius: 14px;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cta-text {
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .cta-text small {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      opacity: .8;
+      margin-top: 2px;
+    }
+    .cta-phone {
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: -.02em;
+      white-space: nowrap;
+    }
+
+    .footer {
+      padding: 0 24px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .address {
+      font-size: 10px;
+      color: rgba(255,255,255,.35);
+    }
+    .tagline {
+      font-size: 10px;
+      color: rgba(255,255,255,.35);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">АЛТАЙ<span>НАВЕС</span><sup style="font-size:12px;color:#b8860b;margin-left:2px">22</sup></div>
+    <div class="phone">8-964-603-41-43</div>
+  </div>
+
+  <div class="photo-grid">
+    <div class="photo"><img src="img-bbq-2.png" alt="Зона барбекю с арочной крышей"></div>
+    <div class="photo"><img src="img-pergola-1.png" alt="Беседка светлая"></div>
+    <div class="photo"><img src="img-bbq-1.png" alt="Мангальная зона с вытяжкой"></div>
+    <div class="photo"><img src="img-pergola-2.png" alt="Беседка тёмная"></div>
+  </div>
+
+  <div class="content">
+    <h1 class="headline">Беседка с мангалом —<br>ваше <em>любимое место</em></h1>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-title">Металл + дерево</div>
+        <div class="feature-text">Каркас не гниёт, дерево создаёт уют</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">Мангал и вытяжка</div>
+        <div class="feature-text">Готовьте на свежем воздухе круглый год</div>
+      </div>
+      <div class="feature">
+        <div class="feature-title">Под ваш участок</div>
+        <div class="feature-text">Любой размер, форма, комплектация</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <div class="cta-text">Позвоните — обсудим<br>вашу беседку мечты<small>Бесплатный выезд на замер</small></div>
+    <div class="cta-phone">8-964-603-41-43</div>
+  </div>
+
+  <div class="footer">
+    <div class="address">г. Барнаул, ул. Матросова, 9И</div>
+    <div class="tagline">алтайнавес.рф</div>
+  </div>
+
+</body>
+</html>

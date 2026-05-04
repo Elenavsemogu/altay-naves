@@ -404,6 +404,9 @@ a { text-decoration: none; color: inherit; }
   font-size: 20px;
   font-weight: 800;
   color: #1a1a1a;
+  word-break: break-word;
+  line-height: 1.2;
+}
   letter-spacing: -.02em;
 }
 .price-row-single { flex: none; }
