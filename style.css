@@ -129,7 +129,7 @@ a { text-decoration: none; color: inherit; }
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   gap: 8px;
-  max-height: 580px;
+  height: 520px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -141,7 +141,7 @@ a { text-decoration: none; color: inherit; }
 .mosaic-cell {
   position: relative;
   overflow: hidden;
-  border-radius: 4px;
+  min-height: 0;
 }
 .mosaic-cell img {
   position: absolute;
@@ -150,8 +150,9 @@ a { text-decoration: none; color: inherit; }
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transform: scale(1.12);
-  transition: opacity 1.6s cubic-bezier(.22,1,.36,1), transform 7s cubic-bezier(.22,1,.36,1);
+  transform: scale(1.08);
+  will-change: opacity, transform;
+  transition: opacity 1.8s cubic-bezier(.22,1,.36,1), transform 8s cubic-bezier(.12,.8,.32,1);
 }
 .mosaic-cell img.m-active {
   opacity: 1;
@@ -159,8 +160,8 @@ a { text-decoration: none; color: inherit; }
 }
 .mosaic-cell img.m-exit {
   opacity: 0;
-  transform: scale(1.06);
-  transition: opacity 1.2s cubic-bezier(.55,.06,.68,.19), transform 1.2s cubic-bezier(.55,.06,.68,.19);
+  transform: scale(1.04);
+  transition: opacity 1.4s cubic-bezier(.55,.06,.68,.19), transform 1.4s cubic-bezier(.55,.06,.68,.19);
 }
 .cell-large { border-radius: 20px 0 0 20px; }
 .mosaic-col .cell-top { border-radius: 0 20px 0 0; }
@@ -263,6 +264,8 @@ a { text-decoration: none; color: inherit; }
   border-radius: 20px;
   overflow: hidden;
   transition: transform .25s, box-shadow .25s, opacity .25s;
+  display: flex;
+  flex-direction: column;
 }
 .card-hidden {
   opacity: 0;
@@ -297,7 +300,16 @@ a { text-decoration: none; color: inherit; }
   text-transform: uppercase;
   letter-spacing: .1em;
 }
-.card-body { padding: 24px; }
+.card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.card-body .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
 .card-tag {
   display: inline-block;
   padding: 4px 12px;
@@ -637,8 +649,8 @@ a { text-decoration: none; color: inherit; }
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-  .hero-image, .hero-mosaic { max-height: 420px; }
-  .hero-mosaic { max-height: 420px; }
+  .hero-image, .hero-mosaic { height: 380px; }
+  .hero-mosaic { height: 380px; }
   .hero h1 { font-size: 40px; }
   .benefits-grid { grid-template-columns: repeat(2, 1fr); }
   .catalog-grid { grid-template-columns: repeat(2, 1fr); }
@@ -651,6 +663,8 @@ a { text-decoration: none; color: inherit; }
   .nav { display: none; }
   .hero { padding: 110px 0 60px; }
   .hero h1 { font-size: 32px; }
+  .hero-mosaic { height: 260px; gap: 4px; }
+  .mosaic-col { gap: 4px; }
   .hero-sub { font-size: 15px; }
   .hero-stats { gap: 24px; flex-wrap: wrap; }
   .stat-num { font-size: 28px; }
