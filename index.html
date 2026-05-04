@@ -47,8 +47,24 @@
         </div>
       </div>
     </div>
-    <div class="hero-image">
-      <img src="hero-carport.png" alt="Навес для автомобиля из металла">
+    <div class="hero-mosaic">
+      <div class="mosaic-cell cell-large">
+        <img src="hero-carport.png" alt="Навес для автомобиля">
+        <img src="img-carport-arch.png" alt="Арочный навес">
+        <img src="img-single-1.png" alt="Односкатный навес">
+      </div>
+      <div class="mosaic-col">
+        <div class="mosaic-cell cell-top">
+          <img src="img-bbq-2.png" alt="Зона барбекю">
+          <img src="img-pergola-1.png" alt="Беседка светлая">
+          <img src="img-bbq-1.png" alt="Мангальная зона">
+        </div>
+        <div class="mosaic-cell cell-bottom">
+          <img src="img-shed-1.png" alt="Бытовка">
+          <img src="img-pergola-2.png" alt="Беседка тёмная">
+          <img src="img-shed-2.png" alt="Хозблок">
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -505,6 +521,27 @@ document.getElementById('lead-form').addEventListener('submit', function(e) {
     this.querySelector('button[type="submit"]').textContent = 'Получить расчёт';
     this.querySelector('button[type="submit"]').disabled = false;
   }, 10000);
+});
+document.querySelectorAll('.mosaic-cell').forEach(cell => {
+  const imgs = cell.querySelectorAll('img');
+  if (imgs.length < 2) { imgs[0]?.classList.add('m-active'); return; }
+  let cur = 0;
+  imgs[cur].classList.add('m-active');
+
+  let round = 0;
+  function next() {
+    const prev = cur;
+    cur = (cur + 1) % imgs.length;
+    imgs[prev].classList.remove('m-active');
+    imgs[prev].classList.add('m-exit');
+    imgs[cur].classList.add('m-active');
+    setTimeout(() => imgs[prev].classList.remove('m-exit'), 1400);
+    round++;
+    const delay = Math.max(2800, 6000 - round * 400);
+    setTimeout(next, delay);
+  }
+  const offset = Math.random() * 3000 + 2000;
+  setTimeout(next, offset);
 });
 </script>
 </body>
